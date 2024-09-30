@@ -1,0 +1,205 @@
+html,body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #2c3a47;
+    z-index: 25;
+}
+ul {
+    display: flex;
+}
+ul,li {
+    margin: 0 18px;
+}
+li,a {
+    position: relative;
+    display: block;
+    color: white;
+    width: 64px;
+    height: 64px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 66px;
+    border-radius: 50%;
+    background: #2c3a47;
+    transition: 0.6s;
+}
+li a:hover {
+    text-shadow: 0 0 4px #25ccf7;
+}
+li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #25ccf7;
+    transition: 0.6s;
+    transform: scale(0.8);
+    z-index: -1;
+}
+li a:hover::before {
+    box-shadow: 0 0 14px 2px #25ccf7;
+    transform: scale(1.05);
+}
+.svg-icon {
+    transition: 0.6s;
+    filter: invert(1);
+}
+li a:hover .svg-icon {
+    filter: invert(1) drop-shadow(0 0 2px rgb(37, 204, 247));
+}
+@media screen and (max-width: 512px) {
+    ul {
+        flex-direction: column;
+    }
+    ul, li {
+        margin: 18px 0;
+    }
+}
+body {
+    background: #2f3542;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.logo_text {
+    font-family: "PingFang SC";
+    font-size: 84px;
+    fill: none;
+    stroke: url("#geekColor");
+    stroke-width: 1;
+    stroke-dasharray: 10 800;
+    stroke-dashoffset: 10;
+    animation: 3s linear 0s drawing forwards;
+}
+@keyframes drawing {
+    to {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 0;
+    }
+}
+body {
+    background: #2f3542;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.logo_text {
+    font-family: "PingFang SC";
+    font-size: 84px;
+    fill: none;
+    stroke: url("#geekColor");
+    stroke-width: 1;
+    stroke-dasharray: 10 800;
+    stroke-dashoffset: 10;
+    animation: 3s linear 0s drawing forwards;
+}
+@keyframes drawing {
+    to {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 0;
+    }
+}
+html,body {
+    margin: 0;
+    font-family: Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    overflow: hidden;
+}
+body {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: inherit;
+    height: 100vh;
+}
+header h1 {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1em 4em;
+    font-size: 3em;
+}
+header::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url();
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #222f3e;
+}
+article {
+    width: 90vw;
+    max-width: 960px;
+    padding: 6em 0;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.075em;
+    text-indent: 2em;
+    line-height: 1.8em;
+}
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em;
+        padding: 1em 1.5em;
+    }
+}
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+        padding: 1em 1em;
+    }
+    article {
+        font-size: 1em;
+    }
+}
